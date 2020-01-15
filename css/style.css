@@ -1,0 +1,37 @@
+.tarefa {
+    border: 1px solid #404040;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    min-width: 400px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+#add:active {
+    box-shadow: 0 3px 0 #fbff04;
+    top: 3px;
+}
+
+#add {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+#novaTarefa {
+    text-align: center;
+    border-radius: 15px;
+    margin: 15px 0 0 100px;
+    padding: 0 50px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 10vh;
+}
