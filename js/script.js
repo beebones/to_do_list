@@ -10,12 +10,26 @@ if(localStorage.getItem('listaTarefas')) {
 }
 mostrarNaTela(listaTarefas);
 
+inputAdd.onkeypress = function(e) {
+    if(event.key == "Enter") {
+        let valorDigitado = inputAdd.value;
+        listaTarefas.push(valorDigitado);
+
+        gerarTarefa(valorDigitado, listaTarefas.length - 1);
+        localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
+
+        inputAdd.value = "";
+    }
+}
+
 buttonAdd.onclick = function() {
     let valorDigitado = inputAdd.value;
     listaTarefas.push(valorDigitado);
 
     gerarTarefa(valorDigitado, listaTarefas.length - 1);
     localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
+
+    inputAdd.value = "";
 }
 
 function mostrarNaTela(listaTarefas) {
